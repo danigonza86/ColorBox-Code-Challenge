@@ -1,25 +1,37 @@
 <DOCTYPE! html>
 <html lang='en'>
-<head>
-<title>Puppy time</title>
-</head>
-<body>
-<h1>Puppy time</h1>
-
-<p>
-Here are some photos of my dog:
-</p>
-
-<p>
-<a href="images/puppy1.jpg" rel="photo"  title="Outside">First</a><br>
-<a href="images/puppy2.jpg" rel="photo"  title="Inside">Second</a><br>
-<a href="images/puppy3.jpg" rel="photo"  title="Close-up">Third</a>
-</p>
-
-<p>
-<a class='youtube' href="http://www.youtube.com/embed/1LBJSy0Fzmc?rel=0" title="Envy Labs Office Tour">Want to know what it's like inside Envy Labs?</a>
-</p>
-
-
-</body>
+    <head>
+        <title>Puppy time</title>
+        <style>
+        	body{font:12px/1.2 Verdana, sans-serif; padding:0 10px;}
+        	a:link, a:visited{text-decoration:none; color:#416CE5; border-bottom:1px solid #416CE5;}
+        	h1{font-size:13px; margin:15px 0 0 0;}
+        </style>
+        <link rel="stylesheet" href="colorbox.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="jquery.colorbox-min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".group").colorbox({rel:'group', slideshow:true, transition:"fade", innerWidth:400, innerHeight:400});
+                $(".youtube").colorbox({iframe:true, innerWidth: 425, innerHeight: 344});
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Puppy time</h1>
+        
+        <p>
+        Here are some photos of my dog:
+        </p>
+        
+        <p>
+        <a class="group cboxElement" href="images/puppy1.jpg" rel="photo"  title="Outside">First</a><br>
+        <a class="group cboxElement" href="images/puppy2.jpg" rel="photo"  title="Inside">Second</a><br>
+        <a class="group cboxElement" href="images/puppy3.jpg" rel="photo"  title="Close-up">Third</a>
+        </p>
+        
+        <p>
+        <a class='youtube' href="http://www.youtube.com/embed/1LBJSy0Fzmc?rel=0" title="Envy Labs Office Tour">Want to know what it's like inside Envy Labs?</a>
+        </p>
+    </body>
 </html>
